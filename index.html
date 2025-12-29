@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Название вашего SaaS] — Автоматизация бизнеса</title>
+    <meta name="description" content="Telegram бот для автоматизации бизнес-процессов. Разработка, настройка, поддержка. Самозанятый РБ.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 0; text-align: center; }
+        .hero h1 { font-size: 3em; margin-bottom: 20px; }
+        .hero p { font-size: 1.3em; margin-bottom: 30px; }
+        .cta { display: inline-block; background: #ff6b6b; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1em; transition: transform 0.3s; }
+        .cta:hover { transform: scale(1.05); }
+        section { padding: 80px 0; }
+        .features { background: #f8f9fa; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        .feature { text-align: center; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .feature-icon { font-size: 3em; margin-bottom: 20px; }
+        .pricing { background: #fff; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .price-card { border: 2px solid #e9ecef; border-radius: 20px; padding: 40px 30px; text-align: center; transition: all 0.3s; }
+        .price-card:hover { border-color: #667eea; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .price-header { margin-bottom: 30px; }
+        .price-amount { font-size: 3em; font-weight: bold; color: #667eea; }
+        .price-period { color: #666; font-size: 1.2em; }
+        .about { background: #f8f9fa; }
+        .legal-section { background: #fff; padding: 60px 0; border-top: 1px solid #eee; }
+        .legal-container { max-width: 800px; margin: 0 auto; }
+        .contacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .contact-item { text-align: center; padding: 20px; }
+        footer { background: #333; color: white; text-align: center; padding: 30px 0; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2em; } }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>[Название вашего SaaS]</h1>
+            <p>Автоматизация бизнес-процессов через Telegram бот</p>
+            <p>Разработка, настройка, поддержка. SaaS сервис для малого бизнеса</p>
+            <a href="https://t.me/[ваш_бот_username]_bot" class="cta">🚀 Начать работу</a>
+        </div>
+    </header>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">Почему выбирают нас</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Мгновенная настройка</h3>
+                    <p>Запуск за 15 минут. Никаких долгих установок и сложных настроек.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Безопасность данных</h3>
+                    <p>Все данные хранятся в Беларуси. GDPR-соответствие. Резервное копирование.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Telegram интерфейс</h3>
+                    <p>Управление через любимый мессенджер. Никаких приложений.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Прозрачная цена</h3>
+                    <p>Платите только за результат. Без скрытых платежей.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Техподдержка 24/7</h3>
+                    <p>Помощь в Telegram в любое время. Быстрые ответы.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Автоматические обновления</h3>
+                    <p>Новые функции и исправления без вашего участия.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">Тарифы</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Старт</h3>
+                        <div class="price-amount">25 BYN</div>
+                        <div class="price-period">в месяц</div>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 30px 0;">
+                        <li>✓ До 100 операций/мес</li>
+                        <li>✓ Базовая автоматизация</li>
+                        <li>✓ Поддержка 9:00-18:00</li>
+                    </ul>
+                    <a href="https://t.me/[ваш_бот]_bot?start=start" class="cta" style="margin-top: 20px; display: inline-block;">Выбрать</a>
+                </div>
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Про</h3>
+                        <div class="price-amount">75 BYN</div>
+                        <div class="price-period">в месяц</div>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 30px 0;">
+                        <li>✓ До 1000 операций/мес</li>
+                        <li>✓ Расширенная автоматизация</li>
+                        <li>✓ Приоритетная поддержка</li>
+                        <li>✓ API доступ</li>
+                    </ul>
+                    <a href="https://t.me/[ваш_бот]_bot?start=pro" class="cta" style="margin-top: 20px; display: inline-block;">Выбрать</a>
+                </div>
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Enterprise</h3>
+                        <div class="price-amount">199 BYN</div>
+                        <div class="price-period">в месяц</div>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 30px 0;">
+                        <li>✓ Неограниченные операции</li>
+                        <li>✓ Полная кастомизация</li>
+                        <li>✓ 24/7 поддержка</li>
+                        <li>✓ Выделенный сервер</li>
+                    </ul>
+                    <a href="https://t.me/[ваш_бот]_bot?start=enterprise" class="cta" style="margin-top: 20px; display: inline-block;">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 50px;">О сервисе</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2em; margin-bottom: 30px;">
+                    Современный Telegram бот для автоматизации рутинных задач малого бизнеса.
+                    Разработан и поддерживается резидентом Республики Беларусь.
+                </p>
+                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 40px;">
+                    <h3 style="margin-bottom: 20px;">Реквизиты исполнителя</h3>
+                    <p><strong>ФИО:</strong> [Ваше ФИО]</p>
+                    <p><strong>УНП:</strong> [Ваш УНП]</p>
+                    <p><strong>Адрес:</strong> Республика Беларусь, г. Минск</p>
+                    <p><strong>Email:</strong> [ваш@email.com]</p>
+                    <p><strong>Telegram:</strong> <a href="https://t.me/[ник]">@[ник]</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal -->
+    <section class="legal-section">
+        <div class="legal-container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Юридическая информация</h2>
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+                <h3 style="margin-bottom: 20px;">Лицензионный договор</h3>
+                <p style="margin-bottom: 15px;">
+                    Оплата услуг означает полное и безоговорочное принятие 
+                    <a href="#offer" style="color: #667eea; font-weight: bold;">Публичного лицензионного договора</a>.
+                </p>
+                <p>
+                    Все платежи защищены. Возврат средств возможен в течение 14 дней 
+                    согласно условиям договора.
+                </p>
+            </div>
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
+                <h3 style="margin-bottom: 20px;">Способы оплаты</h3>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li>🇧🇾 ЕРИП / E-POS (Беларусь)</li>
+                    <li>🌍 Банковские карты (Visa, Mastercard) — Россия, Казахстан, мир</li>
+                    <li>💳 Оплата в BYN с автоматической конвертацией</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contacts-section" style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 50px;">Связаться с нами</h2>
+            <div class="contacts" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="contact-item">
+                    <div style="font-size: 3em; margin-bottom: 20px;">💬</div>
+                    <h3>Telegram Bot</h3>
+                    <p><a href="https://t.me/[ваш_бот]_bot" style="color: #667eea; font-size: 1.1em;">@[ваш_бот]</a></p>
+                    <p>Круглосуточно</p>
+                </div>
+                <div class="contact-item">
+                    <div style="font-size: 3em; margin-bottom: 20px;">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:[ваш@email.com]" style="color: #667eea; font-size: 1.1em;">[ваш@email.com]</a></p>
+                    <p>Ответ в течение 24ч</p>
+                </div>
+                <div class="contact-item">
+                    <div style="font-size: 3em; margin-bottom: 20px;">📱</div>
+                    <h3>Телефон</h3>
+                    <p><strong>+375 ([код]) [номер]</strong></p>
+                    <p>Пн-Пт 9:00-20:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Название сервиса]. Все права защищены.</p>
+            <p>Разработано резидентом Республики Беларусь. УНП: [Ваш УНП]</p>
+        </div>
+    </footer>
+</body>
+</html>
