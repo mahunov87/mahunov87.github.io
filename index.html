@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThreadsAI Helper — Ваш AI помощник в продвижении профиля</title>
     <meta name="description" content="ThreadsAI Helper — AI помощник помогает вам создавать вирусные комментарии к постам для быстрого продвижения вашего профиля.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
@@ -36,6 +38,11 @@
         .legal-container { max-width: 800px; margin: 0 auto; }
         .contacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
         .contact-item { text-align: center; padding: 20px; }
+        .contact-hidden { color: #666; font-style: italic; }
+        .contact-form { max-width: 500px; margin: 40px auto 0; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 2px solid #e9ecef; border-radius: 8px; font-size: 16px; }
+        .contact-form button { width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+        .contact-form button:hover { background: #5a67d8; }
         footer { background: #333; color: white; text-align: center; padding: 30px 0; }
         @media (max-width: 768px) { .hero h1 { font-size: 2em; } }
     </style>
@@ -47,7 +54,7 @@
             <h1>ThreadsAI Helper</h1>
             <p style="font-size: 1.4em;">Ваш AI помощник в продвижении профиля</p>
             <p>Помогает вам создавать вирусные комментарии к постам для быстрого продвижения вашего профиля</p>
-            <a href="https://t.me/AppThreads_bot" class="cta">🚀 Получить пробный доступ</a>
+            <a href="https://t.me/AppThreads_bot" class="cta" rel="nofollow">🚀 Получить пробный доступ</a>
         </div>
     </header>
 
@@ -130,7 +137,7 @@
                         <li>✓ Полный функционал</li>
                         <li>✓ Без карты</li>
                     </ul>
-                    <a href="https://t.me/AppThreads_bot?start=trial" class="cta" style="margin-top: 20px; display: inline-block;">Запустить Trial</a>
+                    <a href="https://t.me/AppThreads_bot?start=trial" class="cta" style="margin-top: 20px; display: inline-block;" rel="nofollow">Запустить Trial</a>
                 </div>
                 <div class="price-card featured">
                     <div class="price-header">
@@ -143,7 +150,7 @@
                         <li>✓ Приоритетная поддержка</li>
                         <li>✓ Расширенная аналитика</li>
                     </ul>
-                    <a href="https://t.me/AppThreads_bot?start=pro" class="cta" style="margin-top: 20px; display: inline-block; background: #667eea;">Купить PRO</a>
+                    <a href="https://t.me/AppThreads_bot?start=pro" class="cta" style="margin-top: 20px; display: inline-block; background: #667eea;" rel="nofollow">Купить PRO</a>
                 </div>
                 <div class="price-card">
                     <div class="price-header">
@@ -156,7 +163,7 @@
                         <li>✓ Используйте когда угодно</li>
                         <li>✓ Экономия 40%</li>
                     </ul>
-                    <a href="https://t.me/AppThreads_bot?start=packet" class="cta" style="margin-top: 20px; display: inline-block;">Купить Packet</a>
+                    <a href="https://t.me/AppThreads_bot?start=packet" class="cta" style="margin-top: 20px; display: inline-block;" rel="nofollow">Купить Packet</a>
                 </div>
             </div>
         </div>
@@ -177,8 +184,6 @@
                     <p><strong>ФИО:</strong> Махунов Дмитрий Вячеславович</p>
                     <p><strong>УНП:</strong> AC2573834</p>
                     <p><strong>Адрес:</strong> Республика Беларусь, г. Минск</p>
-                    <p><strong>Email:</strong> <a href="mailto:mahunov87@gmail.com">mahunov87@gmail.com</a></p>
-                    <p><strong>Telegram:</strong> <a href="https://t.me/DiMavBiz">@DiMavBiz</a></p>
                 </div>
             </div>
         </div>
@@ -189,17 +194,17 @@
         <div class="legal-container">
             <h2 style="text-align: center; margin-bottom: 40px;">Юридическая информация</h2>
             <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-    <h3 style="margin-bottom: 20px;">Лицензионный договор</h3>
-    <p style="margin-bottom: 15px;">
-        Оплата услуг означает полное и безоговорочное принятие 
-        <a href="#offer" style="color: #667eea; font-weight: bold;">Публичного лицензионного договора</a>.
-    </p>
-    <p>
-        Все платежи окончательны. <strong>Для ознакомления с работой сервиса предоставляется бесплатный Trial на 3 дня</strong> 
-        доступен без карты. Сервис предоставляется самозанятым 
-        Республики Беларусь (УНП AC2573834).
-    </p>
-</div>
+                <h3 style="margin-bottom: 20px;">Лицензионный договор</h3>
+                <p style="margin-bottom: 15px;">
+                    Оплата услуг означает полное и безоговорочное принятие 
+                    <a href="#offer" style="color: #667eea; font-weight: bold;" rel="nofollow">Публичного лицензионного договора</a>.
+                </p>
+                <p>
+                    Все платежи окончательны. <strong>Бесплатный Trial на 3 дня</strong> 
+                    доступен без карты. Сервис предоставляется самозанятым 
+                    Республики Беларусь (УНП AC2573834).
+                </p>
+            </div>
             <div style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
                 <h3 style="margin-bottom: 20px;">Способы оплаты</h3>
                 <ul style="margin: 0; padding-left: 20px;">
@@ -215,25 +220,38 @@
     <section class="contacts-section" style="padding: 80px 0; background: #f8f9fa;">
         <div class="container">
             <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 50px;">Связаться с нами</h2>
-            <div class="contacts" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div class="contacts">
                 <div class="contact-item">
                     <div style="font-size: 3em; margin-bottom: 20px;">🤖</div>
                     <h3>Telegram Bot</h3>
-                    <p><a href="https://t.me/AppThreads_bot" style="color: #667eea; font-size: 1.3em;">@AppThreads_bot</a></p>
+                    <p><a href="https://t.me/AppThreads_bot" style="color: #667eea; font-size: 1.3em;" rel="nofollow">@AppThreads_bot</a></p>
                     <p>Круглосуточно</p>
                 </div>
                 <div class="contact-item">
                     <div style="font-size: 3em; margin-bottom: 20px;">📧</div>
                     <h3>Email</h3>
-                    <p><a href="mailto:mahunov87@gmail.com" style="color: #667eea; font-size: 1.3em;">mahunov87@gmail.com</a></p>
+                    <p id="email-container" class="contact-hidden">
+                        <a href="#" class="email-link" rel="nofollow" style="color: #667eea; font-size: 1.3em;">📧 Загружается...</a>
+                    </p>
                     <p>Ответ в течение 24ч</p>
                 </div>
                 <div class="contact-item">
                     <div style="font-size: 3em; margin-bottom: 20px;">📱</div>
                     <h3>Телефон</h3>
-                    <p><strong>+375 33 344 50 30</strong></p>
+                    <p id="phone-container" class="contact-hidden">
+                        <a href="#" class="phone-link" rel="nofollow" style="color: #667eea;">📞 Загружается...</a>
+                    </p>
                     <p>Пн-Пт 9:00-21:00</p>
                 </div>
+            </div>
+            
+            <!-- Форма обратной связи -->
+            <div class="contact-form">
+                <h3 style="margin-bottom: 20px; text-align: center;">📩 Написать напрямую</h3>
+                <input type="email" id="user-email" placeholder="Ваш email" required>
+                <textarea id="user-message" placeholder="Сообщение" rows="4" required></textarea>
+                <button onclick="sendMessage()">Отправить сообщение</button>
+                <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #666;">Ответ в течение 24 часов</p>
             </div>
         </div>
     </section>
@@ -243,8 +261,40 @@
         <div class="container">
             <p>&copy; 2025 ThreadsAI Helper. Все права защищены.</p>
             <p>Разработано резидентом Республики Беларусь. УНП: AC2573834</p>
-            <p><small>Оплата услуг означает согласие с <a href="#offer" style="color: #ccc;">лицензионным договором</a></small></p>
         </div>
     </footer>
+
+    <!-- JavaScript защита контактов -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Генерация email
+            const emailLink = document.querySelector('.email-link');
+            emailLink.href = 'mailto:mahunov87@gmail.com';
+            emailLink.innerHTML = '📧 Написать в поддержку';
+            
+            // Генерация телефона
+            const phoneLink = document.querySelector('.phone-link');
+            phoneLink.href = 'tel:+375333445030';
+            phoneLink.innerHTML = '+375 33 344 50 30';
+            
+            // Удаляем классы скрытия
+            document.getElementById('email-container').classList.remove('contact-hidden');
+            document.getElementById('phone-container').classList.remove('contact-hidden');
+        });
+
+        // Функция отправки сообщения (заглушка)
+        function sendMessage() {
+            const email = document.getElementById('user-email').value;
+            const message = document.getElementById('user-message').value;
+            
+            if (email && message) {
+                alert('Сообщение отправлено! Ответ в Telegram @AppThreads_bot в течение 24 часов.');
+                document.getElementById('user-email').value = '';
+                document.getElementById('user-message').value = '';
+            } else {
+                alert('Заполните все поля!');
+            }
+        }
+    </script>
 </body>
 </html>
