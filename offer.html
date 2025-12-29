@@ -501,20 +501,21 @@
                 непреодолимой силы (форс-мажор).
             </p>
 
-           <div class="signature-block">
+<div class="signature-block">
     <h2>Реквизиты лицензиара</h2>
     <div class="signature-grid">
         <div class="signature-item">
-            <h4>Самозанятый:</h4>
+            <h4>Индивидуальный предприниматель:</h4>
             <p><strong>ФИО:</strong> Махунов Дмитрий Вячеславович</p>
             <p><strong>УНП:</strong> AC2573834</p>
             <p><strong>Адрес:</strong> Республика Беларусь, г. Минск</p>
         </div>
         <div class="signature-item">
             <h4>Контактные данные:</h4>
-            <p><strong>Email:</strong> <span class="contact-email" style="color: #718096;">Загружается...</span></p>
-            <p><strong>Telegram:</strong> <span class="contact-telegram" style="color: #718096;">Загружается...</span></p>
-            <p><strong>Телефон:</strong> <span class="contact-phone" style="color: #718096;">Загружается...</span></p>
+            <p><strong>Email:</strong> <span id="contact-email" style="color: #718096;">Загружается...</span></p>
+            <p><strong>Telegram:</strong> <span id="contact-telegram" style="color: #718096;">Загружается...</span></p>
+            <p><strong>Telegram Bot:</strong> <a href="https://t.me/AppThreads_bot" rel="nofollow" style="color: #667eea; text-decoration: none;">@AppThreads_bot</a></p>
+            <p><strong>Телефон:</strong> <span id="contact-phone" style="color: #718096;">Загружается...</span></p>
         </div>
     </div>
 </div>
@@ -526,6 +527,31 @@
     </p>
 </div>
 
+<script>
+// Защита контактов - запускается сразу
+(function() {
+    // Email
+    var email = document.getElementById('contact-email');
+    if (email) {
+        var e = 'mahunov87' + '@' + 'gmail.com';
+        email.innerHTML = '<a href="mailto:' + e + '" rel="nofollow" style="color: #667eea; text-decoration: none;">' + e + '</a>';
+    }
+    
+    // Telegram
+    var telegram = document.getElementById('contact-telegram');
+    if (telegram) {
+        var t = '@DiMavBiz';
+        telegram.innerHTML = '<a href="https://t.me/DiMavBiz" rel="nofollow" style="color: #667eea; text-decoration: none;">' + t + '</a>';
+    }
+    
+    // Phone
+    var phone = document.getElementById('contact-phone');
+    if (phone) {
+        var p = '+375 33 344 50 30';
+        phone.innerHTML = '<a href="tel:+375333445030" rel="nofollow" style="color: #667eea; text-decoration: none;">' + p + '</a>';
+    }
+})();
+</script>
         </div>
     </div>
 </body>
