@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Название вашего SaaS] — Автоматизация бизнеса</title>
-    <meta name="description" content="Telegram бот для автоматизации бизнес-процессов. Разработка, настройка, поддержка. Самозанятый РБ.">
+    <title>ThreadsAI Helper — Ваш AI помощник в продвижении профиля</title>
+    <meta name="description" content="ThreadsAI Helper — AI помощник для автоматического комментирования постов в Threads. Получите больше вовлеченности с помощью искусственного интеллекта.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
@@ -20,13 +20,18 @@
         .feature { text-align: center; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .feature-icon { font-size: 3em; margin-bottom: 20px; }
         .pricing { background: #fff; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
         .price-card { border: 2px solid #e9ecef; border-radius: 20px; padding: 40px 30px; text-align: center; transition: all 0.3s; }
         .price-card:hover { border-color: #667eea; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .price-card.featured { border-color: #ff6b6b; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
         .price-header { margin-bottom: 30px; }
-        .price-amount { font-size: 3em; font-weight: bold; color: #667eea; }
+        .price-amount { font-size: 2.8em; font-weight: bold; color: #667eea; }
         .price-period { color: #666; font-size: 1.2em; }
         .about { background: #f8f9fa; }
+        .how-it-works { background: white; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .step { text-align: center; padding: 30px; }
+        .step-number { background: #667eea; color: white; width: 60px; height: 60px; border-radius: 50%; line-height: 60px; font-size: 1.5em; font-weight: bold; margin: 0 auto 20px; }
         .legal-section { background: #fff; padding: 60px 0; border-top: 1px solid #eee; }
         .legal-container { max-width: 800px; margin: 0 auto; }
         .contacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
@@ -39,47 +44,71 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
-            <h1>[Название вашего SaaS]</h1>
-            <p>Автоматизация бизнес-процессов через Telegram бот</p>
-            <p>Разработка, настройка, поддержка. SaaS сервис для малого бизнеса</p>
-            <a href="https://t.me/[ваш_бот_username]_bot" class="cta">🚀 Начать работу</a>
+            <h1>ThreadsAI Helper</h1>
+            <p style="font-size: 1.4em;">Ваш AI помощник в продвижении профиля</p>
+            <p>Автоматическое комментирование постов с помощью искусственного интеллекта</p>
+            <a href="https://t.me/AppThreads_bot" class="cta">🚀 Получить пробный доступ</a>
         </div>
     </header>
+
+    <!-- How it works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">Как это работает</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Установите расширение</h3>
+                    <p>Скачайте наше расширение для браузера Chrome/Firefox</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Введите лицензионный ключ</h3>
+                    <p>Получите доступ к серверу с ИИ-логикой</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Начните продвижение</h3>
+                    <p>AI автоматически комментирует посты в Threads</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Features -->
     <section class="features">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">Почему выбирают нас</h2>
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">Почему ThreadsAI Helper</h2>
             <div class="features-grid">
                 <div class="feature">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Умный ИИ</h3>
+                    <p>Генерирует естественные комментарии, которые не выглядят как спам</p>
+                </div>
+                <div class="feature">
                     <div class="feature-icon">⚡</div>
-                    <h3>Мгновенная настройка</h3>
-                    <p>Запуск за 15 минут. Никаких долгих установок и сложных настроек.</p>
+                    <h3>Мгновенная работа</h3>
+                    <p>Доступ к серверу сразу после активации лицензии</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🔒</div>
-                    <h3>Безопасность данных</h3>
-                    <p>Все данные хранятся в Беларуси. GDPR-соответствие. Резервное копирование.</p>
+                    <h3>Безопасность</h3>
+                    <p>Данные хранятся в Беларуси. Ваши аккаунты защищены</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <h3>Telegram интерфейс</h3>
-                    <p>Управление через любимый мессенджер. Никаких приложений.</p>
+                    <div class="feature-icon">📊</div>
+                    <h3>Статистика</h3>
+                    <p>Отслеживайте эффективность продвижения в реальном времени</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">💰</div>
-                    <h3>Прозрачная цена</h3>
-                    <p>Платите только за результат. Без скрытых платежей.</p>
+                    <div class="feature-icon">🎯</div>
+                    <h3>Таргетинг</h3>
+                    <p>Настраивайте комментирование под свою нишу</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🛠️</div>
-                    <h3>Техподдержка 24/7</h3>
-                    <p>Помощь в Telegram в любое время. Быстрые ответы.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Автоматические обновления</h3>
-                    <p>Новые функции и исправления без вашего участия.</p>
+                    <h3>Поддержка</h3>
+                    <p>Помощь в Telegram 24/7</p>
                 </div>
             </div>
         </div>
@@ -92,44 +121,42 @@
             <div class="pricing-grid">
                 <div class="price-card">
                     <div class="price-header">
-                        <h3>Старт</h3>
-                        <div class="price-amount">25 BYN</div>
-                        <div class="price-period">в месяц</div>
+                        <h3>🎁 Trial</h3>
+                        <div class="price-amount">БЕСПЛАТНО</div>
+                        <div class="price-period">3 дня</div>
                     </div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
-                        <li>✓ До 100 операций/мес</li>
-                        <li>✓ Базовая автоматизация</li>
-                        <li>✓ Поддержка 9:00-18:00</li>
+                        <li>✓ 15 AI запросов в сутки</li>
+                        <li>✓ Полный функционал</li>
+                        <li>✓ Без карты</li>
                     </ul>
-                    <a href="https://t.me/[ваш_бот]_bot?start=start" class="cta" style="margin-top: 20px; display: inline-block;">Выбрать</a>
+                    <a href="https://t.me/AppThreads_bot?start=trial" class="cta" style="margin-top: 20px; display: inline-block;">Запустить Trial</a>
                 </div>
-                <div class="price-card">
+                <div class="price-card featured">
                     <div class="price-header">
-                        <h3>Про</h3>
-                        <div class="price-amount">75 BYN</div>
-                        <div class="price-period">в месяц</div>
+                        <h3>⭐ PRO</h3>
+                        <div class="price-amount">50 BYN</div>
+                        <div class="price-period">30 дней</div>
                     </div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
-                        <li>✓ До 1000 операций/мес</li>
-                        <li>✓ Расширенная автоматизация</li>
+                        <li>✓ 50 AI запросов в сутки</li>
                         <li>✓ Приоритетная поддержка</li>
-                        <li>✓ API доступ</li>
+                        <li>✓ Расширенная аналитика</li>
                     </ul>
-                    <a href="https://t.me/[ваш_бот]_bot?start=pro" class="cta" style="margin-top: 20px; display: inline-block;">Выбрать</a>
+                    <a href="https://t.me/AppThreads_bot?start=pro" class="cta" style="margin-top: 20px; display: inline-block; background: #667eea;">Купить PRO</a>
                 </div>
                 <div class="price-card">
                     <div class="price-header">
-                        <h3>Enterprise</h3>
-                        <div class="price-amount">199 BYN</div>
-                        <div class="price-period">в месяц</div>
+                        <h3>📦 Packet</h3>
+                        <div class="price-amount">30 BYN</div>
+                        <div class="price-period">без срока</div>
                     </div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
-                        <li>✓ Неограниченные операции</li>
-                        <li>✓ Полная кастомизация</li>
-                        <li>✓ 24/7 поддержка</li>
-                        <li>✓ Выделенный сервер</li>
+                        <li>✓ 1000 AI кредитов</li>
+                        <li>✓ Используйте когда угодно</li>
+                        <li>✓ Экономия 40%</li>
                     </ul>
-                    <a href="https://t.me/[ваш_бот]_bot?start=enterprise" class="cta" style="margin-top: 20px; display: inline-block;">Выбрать</a>
+                    <a href="https://t.me/AppThreads_bot?start=packet" class="cta" style="margin-top: 20px; display: inline-block;">Купить Packet</a>
                 </div>
             </div>
         </div>
@@ -139,18 +166,19 @@
     <section class="about">
         <div class="container">
             <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 50px;">О сервисе</h2>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
                 <p style="font-size: 1.2em; margin-bottom: 30px;">
-                    Современный Telegram бот для автоматизации рутинных задач малого бизнеса.
-                    Разработан и поддерживается резидентом Республики Беларусь.
+                    ThreadsAI Helper — это расширение для браузера, которое использует искусственный интеллект 
+                    для автоматического создания естественных комментариев под постами в Threads. 
+                    Получите больше вовлеченности и роста профиля без рутинной работы.
                 </p>
                 <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 40px;">
                     <h3 style="margin-bottom: 20px;">Реквизиты исполнителя</h3>
-                    <p><strong>ФИО:</strong> [Ваше ФИО]</p>
-                    <p><strong>УНП:</strong> [Ваш УНП]</p>
+                    <p><strong>ФИО:</strong> Махунов Дмитрий Вячеславович</p>
+                    <p><strong>УНП:</strong> AC2573834</p>
                     <p><strong>Адрес:</strong> Республика Беларусь, г. Минск</p>
-                    <p><strong>Email:</strong> [ваш@email.com]</p>
-                    <p><strong>Telegram:</strong> <a href="https://t.me/[ник]">@[ник]</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:vmahunov87@icloud.com">vmahunov87@icloud.com</a></p>
+                    <p><strong>Telegram:</strong> <a href="https://t.me/DiMavBiz">@DiMavBiz</a></p>
                 </div>
             </div>
         </div>
@@ -168,15 +196,16 @@
                 </p>
                 <p>
                     Все платежи защищены. Возврат средств возможен в течение 14 дней 
-                    согласно условиям договора.
+                    согласно условиям договора. Сервис предоставляется самозанятым 
+                    Республики Беларусь (УНП AC2573834).
                 </p>
             </div>
             <div style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
                 <h3 style="margin-bottom: 20px;">Способы оплаты</h3>
                 <ul style="margin: 0; padding-left: 20px;">
                     <li>🇧🇾 ЕРИП / E-POS (Беларусь)</li>
-                    <li>🌍 Банковские карты (Visa, Mastercard) — Россия, Казахстан, мир</li>
-                    <li>💳 Оплата в BYN с автоматической конвертацией</li>
+                    <li>🌍 Банковские карты Visa/Mastercard (РФ, Казахстан, мир)</li>
+                    <li>💳 Оплата в BYN с автоматической конвертацией валюты</li>
                 </ul>
             </div>
         </div>
@@ -188,22 +217,22 @@
             <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 50px;">Связаться с нами</h2>
             <div class="contacts" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                 <div class="contact-item">
-                    <div style="font-size: 3em; margin-bottom: 20px;">💬</div>
+                    <div style="font-size: 3em; margin-bottom: 20px;">🤖</div>
                     <h3>Telegram Bot</h3>
-                    <p><a href="https://t.me/[ваш_бот]_bot" style="color: #667eea; font-size: 1.1em;">@[ваш_бот]</a></p>
+                    <p><a href="https://t.me/AppThreads_bot" style="color: #667eea; font-size: 1.3em;">@AppThreads_bot</a></p>
                     <p>Круглосуточно</p>
                 </div>
                 <div class="contact-item">
                     <div style="font-size: 3em; margin-bottom: 20px;">📧</div>
                     <h3>Email</h3>
-                    <p><a href="mailto:[ваш@email.com]" style="color: #667eea; font-size: 1.1em;">[ваш@email.com]</a></p>
+                    <p><a href="mailto:vmahunov87@icloud.com" style="color: #667eea; font-size: 1.3em;">vmahunov87@icloud.com</a></p>
                     <p>Ответ в течение 24ч</p>
                 </div>
                 <div class="contact-item">
                     <div style="font-size: 3em; margin-bottom: 20px;">📱</div>
                     <h3>Телефон</h3>
-                    <p><strong>+375 ([код]) [номер]</strong></p>
-                    <p>Пн-Пт 9:00-20:00</p>
+                    <p><strong>+375 33 344 50 30</strong></p>
+                    <p>Пн-Пт 9:00-21:00</p>
                 </div>
             </div>
         </div>
@@ -212,8 +241,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 [Название сервиса]. Все права защищены.</p>
-            <p>Разработано резидентом Республики Беларусь. УНП: [Ваш УНП]</p>
+            <p>&copy; 2025 ThreadsAI Helper. Все права защищены.</p>
+            <p>Разработано резидентом Республики Беларусь. УНП: AC2573834</p>
+            <p><small>Оплата услуг означает согласие с <a href="#offer" style="color: #ccc;">лицензионным договором</a></small></p>
         </div>
     </footer>
 </body>
