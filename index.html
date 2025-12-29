@@ -6,254 +6,484 @@
     <title>ThreadsAI Helper — Ваш AI помощник в продвижении</title>
     <meta name="description" content="ThreadsAI Helper — AI помощник помогает вам создавать вирусные комментарии к постам для быстрого продвижения вашего профиля.">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="referrer" content="no-referrer">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --shadow-lg: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
-            --shadow-xl: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body { 
             font-family: 'Inter', sans-serif; 
             line-height: 1.6; 
-            color: #2d3748; 
-            overflow-x: hidden;
-            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1a202c; 
+            background: #f7fafc;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         
         /* Hero */
         .hero {
             min-height: 100vh;
-            background: var(--primary-gradient);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
+            color: white;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs>ircle cx="300" cy="200" r="100" fill="url(%23a)"><animate attributeName="r" values="10;100;10" dur="4s" repeatCount="indefinite"/></circle>ircle cx="700" cy="600" r="80" fill="url(%23a)"><animate attributeName="r" values="15;80;15" dur="5s" repeatCount="indefinite"/></circle></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
         
         .hero-content { 
             text-align: center; 
             z-index: 2; 
-            position: relative;
             max-width: 900px;
             margin: 0 auto;
+            padding: 40px 0;
         }
+        
         .hero h1 { 
-            font-size: clamp(2.5rem, 5vw, 4.5rem); 
+            font-size: clamp(2.5rem, 6vw, 4.5rem); 
             font-weight: 800; 
-            margin-bottom: 1.5rem; 
-            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 24px;
+            line-height: 1.1;
         }
+        
         .hero-subtitle { 
-            font-size: clamp(1.2rem, 3vw, 1.5rem); 
-            margin-bottom: 2rem; 
+            font-size: clamp(1.2rem, 3vw, 1.6rem); 
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        
+        .hero-text {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 40px;
             opacity: 0.95;
         }
-        .cta-primary { 
-            background: rgba(255, 255, 255, 0.2); 
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            color: white; 
-            padding: 1rem 2.5rem; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: 600; 
-            font-size: 1.1rem; 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 0.5rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-lg);
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 48px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
-        .cta-primary:hover { 
-            transform: translateY(-4px); 
-            box-shadow: var(--shadow-xl);
+        
+        .btn:hover {
+            transform: translateY(-4px);
             background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
         }
 
         /* Sections */
         section { padding: 100px 0; }
+        
         .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 700;
             text-align: center;
-            margin-bottom: 4rem;
-            background: var(--primary-gradient);
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
-        /* Glass cards */
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
+        /* Cards */
+        .card {
+            background: white;
             border-radius: 24px;
-            padding: 2.5rem;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
         }
-        .glass-card:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-xl);
-            border-color: rgba(255, 255, 255, 0.4);
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
         }
 
-        /* How it works */
-        .steps { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 2rem; 
-            margin-top: 4rem; 
+        /* How it Works */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
         }
-        .step-number { 
-            background: var(--accent-gradient); 
-            color: white; 
-            width: 80px; 
-            height: 80px; 
-            border-radius: 50%; 
-            line-height: 80px; 
-            font-size: 1.8em; 
-            font-weight: 700; 
-            margin: 0 auto 1.5rem; 
-            box-shadow: var(--shadow-lg);
+        
+        .step-number {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 24px;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+        }
+        
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .step p {
+            text-align: center;
+            color: #4a5568;
         }
 
         /* Features */
-        .features-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 2rem; 
-            margin-top: 4rem; 
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
         }
-        .feature-icon { font-size: 3.5rem; margin-bottom: 1.5rem; }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .feature p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
 
         /* Pricing */
-        .pricing-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 2rem; 
-            margin-top: 4rem; 
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-        .price-card.featured { 
-            border-color: #ff6b6b; 
-            background: rgba(255, 107, 107, 0.1);
+        
+        .price-card {
+            border: 3px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .price-card.featured {
+            border-color: #f5576c;
             transform: scale(1.05);
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 100%);
         }
-        .price-amount { 
-            font-size: 3.5rem; 
-            font-weight: 800; 
-            background: var(--primary-gradient);
+        
+        .price-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .price-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .price-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            line-height: 1;
+        }
+        
+        .price-period {
+            color: #718096;
+            font-size: 1.2rem;
+            margin-top: 8px;
+        }
+        
+        .price-features {
+            list-style: none;
+            margin: 32px 0;
+        }
+        
+        .price-features li {
+            padding: 12px 0;
+            color: #2d3748;
+            font-size: 1.05rem;
+        }
+        
+        .price-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .price-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        /* About */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-text {
+            font-size: 1.25rem;
+            margin-bottom: 48px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        
+        .requisites {
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .requisites h3 {
+            margin-bottom: 32px;
+            font-size: 1.8rem;
+        }
+        
+        .requisites p {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            color: #2d3748;
+        }
+
+        /* Legal */
+        .legal-grid {
+            display: grid;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .legal-box {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .legal-box h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .legal-box p {
+            margin-bottom: 16px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .legal-box ul {
+            margin-left: 24px;
+        }
+        
+        .legal-box li {
+            margin-bottom: 12px;
+            color: #4a5568;
+        }
+
+        /* Contacts */
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .contact-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info {
+            color: #718096;
+            margin-top: 8px;
         }
 
         /* Form */
-        .contact-form { 
-            max-width: 600px; 
-            margin: 3rem auto 0; 
-            background: var(--glass-bg); 
-            backdrop-filter: blur(20px); 
-            border: 1px solid var(--glass-border); 
-            border-radius: 24px; 
-            padding: 3rem; 
-            box-shadow: var(--shadow-xl);
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
         }
-        .contact-form input, .contact-form textarea { 
-            width: 100%; 
-            padding: 1.25rem; 
-            margin-bottom: 1.5rem; 
-            border: 1px solid rgba(45, 55, 72, 0.2); 
-            border-radius: 16px; 
-            font-size: 1rem; 
-            background: rgba(255, 255, 255, 0.8);
-            transition: all 0.3s;
+        
+        .form-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 32px;
+            color: #2d3748;
         }
-        .contact-form input:focus, .contact-form textarea:focus {
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
             outline: none;
             border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
         }
-        .contact-form button { 
-            width: 100%; 
-            padding: 1.25rem; 
-            background: var(--primary-gradient); 
-            color: white; 
-            border: none; 
-            border-radius: 16px; 
-            font-size: 1.1rem; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: all 0.3s;
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 140px;
         }
-        .contact-form button:hover { transform: translateY(-2px); box-shadow: var(--shadow-xl); }
+        
+        .form-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .form-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+        
+        .form-note {
+            text-align: center;
+            color: #718096;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 48px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 12px;
+        }
+        
+        footer a {
+            color: #a0aec0;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
 
         /* Responsive */
-        @media (max-width: 768px) { 
+        @media (max-width: 768px) {
             section { padding: 60px 0; }
-            .hero { min-height: 90vh; padding-top: 2rem; }
+            .hero { min-height: 90vh; }
+            .price-card.featured { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>ThreadsAI Helper</h1>
                 <p class="hero-subtitle">Ваш AI помощник в продвижении профиля</p>
-                <p style="font-size: 1.3rem; opacity: 0.95; margin-bottom: 3rem;">
-                    Помогает вам создавать вирусные комментарии к постам для быстрого продвижения вашего профиля
-                </p>
-                <a href="https://t.me/AppThreads_bot" class="cta-primary" rel="nofollow">
-                    🚀 Получить пробный доступ
-                </a>
+                <p class="hero-text">Помогает вам создавать вирусные комментарии к постам для быстрого продвижения вашего профиля</p>
+                <a href="https://t.me/AppThreads_bot" class="btn" rel="nofollow">🚀 Получить пробный доступ</a>
             </div>
         </div>
     </section>
 
-    <!-- How it works -->
-    <section class="how-it-works" style="background: #ffffff;">
+    <!-- How it Works -->
+    <section class="how-it-works">
         <div class="container">
             <h2 class="section-title">Как это работает</h2>
-            <div class="steps">
-                <div class="glass-card step">
+            <div class="steps-grid">
+                <div class="card step">
                     <div class="step-number">1</div>
                     <h3>Установите расширение</h3>
                     <p>Скачайте наше расширение для браузера Chrome/Firefox</p>
                 </div>
-                <div class="glass-card step">
+                <div class="card step">
                     <div class="step-number">2</div>
                     <h3>Введите лицензионный ключ</h3>
                     <p>Получите доступ к серверу с ИИ-логикой</p>
                 </div>
-                <div class="glass-card step">
+                <div class="card step">
                     <div class="step-number">3</div>
                     <h3>Начните продвижение</h3>
                     <p>AI поможет создавать вирусные комментарии к постам</p>
@@ -263,36 +493,36 @@
     </section>
 
     <!-- Features -->
-    <section class="features">
+    <section class="features" style="background: white;">
         <div class="container">
             <h2 class="section-title">Почему ThreadsAI Helper</h2>
             <div class="features-grid">
-                <div class="glass-card feature">
+                <div class="card feature">
                     <div class="feature-icon">🧠</div>
                     <h3>Умный ИИ</h3>
                     <p>Создаёт естественные вирусные комментарии, которые повышают вовлечённость</p>
                 </div>
-                <div class="glass-card feature">
+                <div class="card feature">
                     <div class="feature-icon">⚡</div>
                     <h3>Мгновенная работа</h3>
                     <p>Доступ к серверу сразу после активации лицензии</p>
                 </div>
-                <div class="glass-card feature">
+                <div class="card feature">
                     <div class="feature-icon">🔒</div>
                     <h3>Полная конфиденциальность</h3>
-                    <p>Расширение является надстройкой браузера. Приложение не хранит данные вашей учетной записи Threads</p>
+                    <p>Расширение является надстройкой браузера. Приложение не хранит данные вашей учетной записи Threads и сведения о Вас</p>
                 </div>
-                <div class="glass-card feature">
+                <div class="card feature">
                     <div class="feature-icon">📊</div>
                     <h3>Статистика</h3>
                     <p>Отслеживайте эффективность продвижения в реальном времени</p>
                 </div>
-                <div class="glass-card feature">
+                <div class="card feature">
                     <div class="feature-icon">🎯</div>
                     <h3>Таргетинг</h3>
                     <p>Настраивайте создание комментариев под свою нишу</p>
                 </div>
-                <div class="glass-card feature">
+                <div class="card feature">
                     <div class="feature-icon">🛠️</div>
                     <h3>Поддержка</h3>
                     <p>Помощь в Telegram 24/7</p>
@@ -302,32 +532,171 @@
     </section>
 
     <!-- Pricing -->
-    <section class="pricing" style="background: #ffffff;">
+    <section class="pricing">
         <div class="container">
             <h2 class="section-title">Тарифы</h2>
             <div class="pricing-grid">
-                <div class="glass-card price-card">
+                <div class="card price-card">
                     <div class="price-header">
                         <h3>🎁 Trial</h3>
                         <div class="price-amount">БЕСПЛАТНО</div>
                         <div class="price-period">3 дня</div>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 2rem 0;">
-                        <li style="margin-bottom: 0.5rem;">✓ 15 AI запросов в сутки</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Полный функционал</li>
+                    <ul class="price-features">
+                        <li>✓ 15 AI запросов в сутки</li>
+                        <li>✓ Полный функционал</li>
                         <li>✓ Без карты</li>
                     </ul>
-                    <a href="https://t.me/AppThreads_bot?start=trial" class="cta-primary" style="margin-top: 1.5rem; display: inline-block;" rel="nofollow">Запустить Trial</a>
+                    <a href="https://t.me/AppThreads_bot?start=trial" class="price-btn" rel="nofollow">Запустить Trial</a>
                 </div>
-                <div class="glass-card price-card featured">
+                <div class="card price-card featured">
+                    <div class="price-badge">ПОПУЛЯРНЫЙ</div>
                     <div class="price-header">
                         <h3>⭐ PRO</h3>
                         <div class="price-amount">50 BYN</div>
                         <div class="price-period">30 дней</div>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 2rem 0;">
-                        <li style="margin-bottom: 0.5rem;">✓ 50 AI запросов в сутки</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Приоритетная поддержка</li>
+                    <ul class="price-features">
+                        <li>✓ 50 AI запросов в сутки</li>
+                        <li>✓ Приоритетная поддержка</li>
                         <li>✓ Расширенная аналитика</li>
                     </ul>
-                    <a href="https://t.me/AppThreads
+                    <a href="https://t.me/AppThreads_bot?start=pro" class="price-btn" rel="nofollow">Купить PRO</a>
+                </div>
+                <div class="card price-card">
+                    <div class="price-header">
+                        <h3>📦 Packet</h3>
+                        <div class="price-amount">30 BYN</div>
+                        <div class="price-period">без срока</div>
+                    </div>
+                    <ul class="price-features">
+                        <li>✓ 1000 AI кредитов</li>
+                        <li>✓ Используйте когда угодно</li>
+                        <li>✓ Экономия 40%</li>
+                    </ul>
+                    <a href="https://t.me/AppThreads_bot?start=packet" class="price-btn" rel="nofollow">Купить Packet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">О сервисе</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    ThreadsAI Helper — это расширение для браузера, которое помогает вам создавать вирусные комментарии 
+                    к постам в Threads с помощью искусственного интеллекта. 
+                    Получите больше вовлеченности и роста профиля.
+                </p>
+                <div class="requisites">
+                    <h3>Реквизиты исполнителя</h3>
+                    <p><strong>ФИО:</strong> Махунов Дмитрий Вячеславович</p>
+                    <p><strong>УНП:</strong> AC2573834</p>
+                    <p><strong>Адрес:</strong> Республика Беларусь, г. Минск</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal -->
+    <section class="legal">
+        <div class="container">
+            <h2 class="section-title">Юридическая информация</h2>
+            <div class="legal-grid">
+                <div class="legal-box">
+                    <h3>Лицензионный договор</h3>
+                    <p>
+                        Оплата услуг означает полное и безоговорочное принятие 
+                        <a href="#offer" style="color: #667eea; font-weight: 600;" rel="nofollow">Публичного лицензионного договора</a>.
+                    </p>
+                    <p>
+                        <strong>Все платежи окончательны. Бесплатный Trial на 3 дня</strong> 
+                        доступен без карты. Сервис предоставляется самозанятым 
+                        Республики Беларусь (УНП AC2573834).
+                    </p>
+                </div>
+                <div class="legal-box">
+                    <h3>Способы оплаты</h3>
+                    <ul>
+                        <li>🇧🇾 ЕРИП / E-POS (Беларусь)</li>
+                        <li>🌍 Банковские карты Visa/Mastercard (РФ, Казахстан, мир)</li>
+                        <li>💳 Оплата в BYN с автоматической конвертацией валюты</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contacts" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Связаться с нами</h2>
+            <div class="contacts-grid">
+                <div class="card contact-item">
+                    <div class="contact-icon">🤖</div>
+                    <h3>Telegram Bot</h3>
+                    <a href="https://t.me/AppThreads_bot" class="contact-link" rel="nofollow">@AppThreads_bot</a>
+                    <p class="contact-info">Круглосуточно</p>
+                </div>
+                <div class="card contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="#" class="contact-link email-link" rel="nofollow">📧 Загружается...</a>
+                    <p class="contact-info">Ответ в течение 24ч</p>
+                </div>
+                <div class="card contact-item">
+                    <div class="contact-icon">📱</div>
+                    <h3>Телефон</h3>
+                    <a href="#" class="contact-link phone-link" rel="nofollow">📞 Загружается...</a>
+                    <p class="contact-info">Пн-Пт 9:00-21:00</p>
+                </div>
+            </div>
+
+            <!-- Contact Form with Formspree -->
+            <div class="contact-form">
+                <h3 class="form-title">📩 Написать напрямую</h3>
+                <form action="https://formspree.io/f/xvzolonv" method="POST">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Ваше сообщение" required></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="https://t.me/AppThreads_bot">
+                    <input type="hidden" name="_subject" value="Новое сообщение с лендинга ThreadsAI Helper">
+                    <button type="submit" class="form-btn">Отправить сообщение</button>
+                    <p class="form-note">Ответ в течение 24 часов</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ThreadsAI Helper. Все права защищены.</p>
+            <p>Разработано резидентом Республики Беларусь. УНП: AC2573834</p>
+            <p style="margin-top: 16px; font-size: 0.9rem;">
+                <a href="https://t.me/DiMavBiz" rel="nofollow">Telegram: @DiMavBiz</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Protection -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Email protection
+            const emailLink = document.querySelector('.email-link');
+            emailLink.href = 'mailto:mahunov87@gmail.com';
+            emailLink.textContent = '📧 Написать на почту';
+            
+            // Phone protection
+            const phoneLink = document.querySelector('.phone-link');
+            phoneLink.href = 'tel:+375333445030';
+            phoneLink.textContent = '+375 33 344 50 30';
+        });
+    </script>
+</body>
+</html>
